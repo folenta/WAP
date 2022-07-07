@@ -1,0 +1,254 @@
+/* ---------- Main app ---------- */
+body {
+  margin: 0 0 0 200px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+}
+
+.nav {
+  position: fixed;
+  top: 76px;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background: #000f3b;
+  border-right: 5px solid #f07c00;
+}
+
+.nav_link {
+  display: block;
+  padding: 12px 18px;
+  text-decoration: none;
+  /*color: #eeeeee;*/
+  color: #f07c00;
+  font-weight: 500;
+}
+
+.nav_link:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#topBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000f3b;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  height: 70px;
+  border-bottom: 5px solid #f07c00;
+  padding-top: 5px;
+}
+
+.title {
+  padding-left: 20px;
+  top: 20px;
+}
+
+#app {
+  margin: 2em;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-top: 90px;
+}
+
+a {
+  color: #009579;
+  text-decoration: none;
+}
+
+/* ---------- Accordion staff ---------- */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 25px;
+  transition: 0.4s;
+}
+
+.fa-angle-down {
+  float: right;
+  margin-left: 5px;
+}
+
+.active {
+  border-radius: 10px 10px 0 0;
+}
+
+.active .fa-angle-down {
+  transform: rotate(180deg);
+}
+
+.panel {
+  padding: 0 18px;
+  border-radius: 0 0 5px 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* ---------- Info section ---------- */
+.info_button {
+  background-color: #0091eb;
+  border: 5px solid rgb(0, 77, 172);
+  border-radius: 10px;
+  color: rgb(2, 8, 79);
+}
+
+.info_button:hover {
+  background-color: rgb(0, 77, 172);
+  color: white;
+}
+
+.info {
+  background-color: #8bbbff;
+  color: #000f3b;
+}
+
+.fa-info-circle {
+  padding-right: 10px;
+}
+
+/* ---------- Attack section ---------- */
+.attack_button {
+  background-color: #d62e2e;
+  border: 5px solid rgb(193, 2, 2);
+  border-radius: 10px;
+  color: rgb(101, 1, 1);
+}
+
+.attack_button:hover {
+  background-color: rgb(193, 2, 2);
+  color: white;
+}
+
+.attack {
+  background-color: #f39595;
+  color: #470000;
+}
+
+.swords {
+  filter: invert(8%) sepia(90%) saturate(3770%) hue-rotate(357deg)
+    brightness(86%) contrast(110%);
+  padding-right: 10px;
+  padding-left: 5px;
+  transition: 0.2s;
+}
+
+.attack_button:hover .swords {
+  filter: invert(92%) sepia(66%) saturate(0%) hue-rotate(179deg)
+    brightness(106%) contrast(100%);
+  transition: 0.4s;
+}
+
+/* ---------- Defence section ---------- */
+.defence_button {
+  background-color: #64b349;
+  border: 5px solid green;
+  border-radius: 10px;
+  color: rgb(2, 79, 2);
+}
+
+.defence_button:hover {
+  background-color: green;
+  color: white;
+}
+
+.defence {
+  background-color: #afdf9f;
+  color: #013e01;
+}
+
+.fa-shield-alt {
+  padding-right: 10px;
+}
+
+/* ---------- Home page ---------- */
+.home {
+  width: 20%;
+  float: left;
+}
+
+.home_info {
+  padding: 20px;
+  margin-left: 240px;
+}
+
+/* ---------- XSS attack ---------- */
+#XSS_form {
+  width: 370px;
+  float: left;
+  padding-bottom: 10px;
+}
+
+#form_output {
+  float: left;
+}
+
+#form_output p {
+  float: left;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+/* ---------- Form general ---------- */
+.submitButton {
+  margin-top: 15px;
+}
+
+label {
+  display: block;
+}
+
+input[type="text"] {
+  border: 1px solid gray;
+  border-radius: 3px;
+  box-sizing: content-box;
+  padding: 7.5px;
+  padding-top: 10px;
+  font-size: 15px;
+  width: 300px;
+}
+
+input[type="submit"],
+input[type="button"] {
+  background-color: white;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: black;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.form-control {
+  margin-bottom: 5px;
+}
+
+.message-image {
+  float: left;
+  margin-top: 30px;
+}
+
+pre {
+  margin-top: 0;
+}
+
+#clickjack_image {
+  padding-left: 200px;
+}

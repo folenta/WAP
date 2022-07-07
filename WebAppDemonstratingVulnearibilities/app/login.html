@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/index.css">
+    <link rel="stylesheet" href="./public/css/login.css">
+    <title>WebAttack</title>
+</head>
+<body>
+    <div id="topBar">
+        <span class="title">Webové útoky</span>
+    </div>
+    <nav class="nav">
+        <a href="./" class="nav_link" spa>Domov</a>
+        <a href="./clickjacking" class="nav_link" spa>Clickjacking</a>
+        <a href="./xss" class="nav_link" spa>XSS</a>
+        <a href="./csrf" class="nav_link" spa>CSRF</a>
+    </nav>
+    
+
+    <div id="app">
+        <div id="instructions">
+            <h1>Demonštrácia XCRF útoku</h1>
+    
+            <p>Útok XCRF budeme demonštrovať na príklade, v ktorom sa užívateľ môže prihlásiť na svoj účet pomocou prihlacovacieho mena a hesla
+            a po prihlásení si môže zmeniť heslo. Pre demonštráciu útoku je potrebné spraviť nasledujúce kroky:</p>
+    
+            <p><b>1.</b> Prihláste sa na účet pomocou mena <b>User</b> a hesla <b>password</b>.</p>
+            <p><b>2.</b> Po prihlásení si môžete vyskúšať zmeniť heslo, odhlásiť sa a znova prihlásiť a overiť tak, že všetko funguje správne.</p>
+            <p><b>3.</b> Kliknite na lákavý odkaz, ktorý sa po prihlásení objavil pod možnosťami Odhlásiť sa a Zmeniť heslo.</p>
+            <p><b>4.</b> Odhláste sa a skúste sa znova prihlásiť.</p>
+            <p><b>5.</b> Keď je prihlásenie neúspešné, skúste použiť heslo <b>12345</b>.</p>
+            <p><b>6.</b> Vráťte sa do sekcie <b><a href="./csrf">XCRF</a></b> a zistite, čo sa stalo.</p>
+        </div>
+        <div class="login">
+            <form id="CSRF_form">
+                <div class="form-control">
+                    <label for="name">Meno</label>
+                    <input type="text" class="name" id="name" name="name"></input>
+                </div>
+                <div class="form-control">
+                    <label for="password">Heslo</label>
+                    <input type="text" class="password" id="password" name="password" />
+                </div>
+                <div class="submitButton">
+                    <input type="submit" value="Prihlásiť sa"/>
+                </div>
+                
+            </form>
+
+            <div id="login_form">
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="./public/js/login.js"></script>
+</body>
+</html>

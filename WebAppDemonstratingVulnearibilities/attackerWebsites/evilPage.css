@@ -1,0 +1,60 @@
+iframe {
+  width: 1800px;
+  height: 720px;
+  position: absolute;
+  top: 10px;
+  opacity: 0;
+  z-index: 1;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: bold;
+  padding-left: 250px;
+}
+
+span {
+  color: red;
+}
+
+p {
+  font-size: 40px;
+}
+
+.getBack {
+  font-size: 25px;
+}
+
+#message {
+  padding-top: 50px;
+  padding-left: 250px;
+}
+
+input[type="button"] {
+  background-color: white;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+img {
+  margin-top: -20px;
+  float: left;
+}
+
+.winMessage {
+  padding-bottom: 15px;
+}
+
+#reward {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #009579;
+}
